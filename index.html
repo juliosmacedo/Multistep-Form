@@ -24,23 +24,30 @@
     
   <div class="sidebar">
     <div class="sidesteps">
+      <div class="circle-on">1</div>
+      <div class="sidebar-text">
       <h5>STEP 1</h5>
-      <h4>Your info</h4>
+      <h4>Your info</h4></div>
     </div>
 
     <div class="sidesteps">
-      <h5>STEP 2</h5>
-      <h4>Select plan</h4>
+      <div class="circle-on circle-off">2</div>
+      <div class="sidebar-text"><h5>STEP 2</h5>
+      <h4>Select plan</h4></div>
     </div>
 
     <div class="sidesteps">
-      <h5>STEP 3</h5>
+      <div class="circle-on circle-off"">3</div>
+      <div class="sidebar-text"><h5>STEP 3</h5>
       <h4>Add-ons</h4>
     </div>
+    </div>
 
     <div class="sidesteps">
-      <h5>STEP 4</h5>
+      <div class="circle-on circle-off"">4</div>
+      <div class="sidebar-text"><h5>STEP 4</h5>
       <h4>Summary</h4>
+    </div>
     </div>
 
   </div>
@@ -54,15 +61,15 @@
     <h2>Please provide your name, email address, and phone number.</h2>
     <div class="form">
       <h3>Name</h3>
-      <input type="text" name="" id="user-name-input" placeholder="   e.g. Stephen King">
+      <input type="text" name="" id="user-name-input" placeholder="e.g. Stephen King">
       
 
       <h3>Email Address</h3>
-      <input type="email" name="" id="user-email-input" placeholder="    e.g. stephenking@lorem.com">
+      <input type="email" name="" id="user-email-input" placeholder="e.g. stephenking@lorem.com">
     
 
       <h3>Phone Number</h3>
-      <input type="text" name="" id="user-phone-input" placeholder="    e.g. +1 234 567 890">
+      <input type="text" name="" id="user-phone-input" placeholder="e.g. +1 234 567 890">
     
     </div>
 
@@ -76,20 +83,60 @@
     <h1>Select your plan</h1>
     <h2>You have the option of monthly or yearly billing.</h2>
 
-    Arcade
-    $9/mo
+    <div class="plans-div">
+      <div class="plan plan-on">
+        <img class="icon" src="./assets/images/icon-arcade.svg" alt="">
+        <div class="plan-text-month">
+          <h7>Arcade</h7> 
+          <h8>$9/mo</h8>
+        </div>
+        <div class="plan-text-year">
+          <h7>Arcade</h7> 
+          <h8>$90/yr</h8>
+          <h9>2 months free</h9>
+        </div>
+      </div>
 
-    Advanced
-    $12/mo
+      <div class="plan">
+        <img class="icon" src="./assets/images/icon-advanced.svg" alt="">
+        <div class="plan-text-month">
+          <h7>Advanced</h7>
+          <h8>$12/mo</h8>
+        </div>
+        <div class="plan-text-year">
+          <h7>Advanced</h7> 
+          <h8>$120/yr</h8>
+          <h9>2 months free</h9>
+        </div>
+      </div>
 
-    Pro
-    $15/mo
+      <div class="plan">
+        <img class="icon" src="./assets/images/icon-pro.svg" alt="">
+        <div class="plan-text-month">
+          <h7>Pro</h7>
+          <h8>$15/mo</h8>
+        </div>
+        <div class="plan-text-year">
+          <h7>Pro</h7> 
+          <h8>$150/yr</h8>
+          <h9>2 months free</h9>
+        </div>
+      </div>
+    </div>
 
-    Monthly
-    Yearly
-
-    Go Back
-    <button id="next-step2">Next Step</button> 
+    <div class="togglediv">
+      <p class="plan-selector-on">Monthly</p>
+      <label  class="switch">
+        <input type="checkbox" onclick="changeText()">
+        <span class="slider round" ></span>
+      </label>
+      <p class="plan-selector-on plan-selector-off">Yearly</p>
+    </div>
+    
+    <div class="bottom-links">
+      <a href="">Go Back</a> 
+      <button id="next-step2">Next Step</button> 
+    </div>
   </div>
   <!-- Step 2 end -->
 
@@ -98,20 +145,49 @@
     <h1>Pick add-ons</h1>
     <h2>Add-ons help enhance your gaming experience.</h2>
 
-    Online service
-    Access to multiplayer games
-    +$1/mo
+    <div class="add-ons">
 
-    Larger storage
-    Extra 1TB of cloud save
-    +$2/mo
+      <label id="container1" class="container">
+        <div class="checkbox-text">
+          <div class="checkbox-text-description">
+            <h7>Online service</h7> 
+            <h8>Access to multiplayer games</h8>
+          </div>
+        <h9 class="month-addon">+$1/mo</h9>
+        <h9 class="year-addon">+$10/mo</h9></div>
 
-    Customizable Profile
-    Custom theme on your profile
-    +$2/mo
+        <input id="select1" type="checkbox">
+        <span  class="checkmark"></span>
+      </label>
+      
+      <label id="container2" class="container">
+        <div class="checkbox-text">
+          <div class="checkbox-text-description">
+        <h7>Larger storage</h7>
+        <h8>Extra 1TB of cloud save</h8></div>
+        <h9 class="month-addon">+$2/mo</h9>
+        <h9 class="year-addon">+$20/mo</h9></div>
+        <input id="select2" type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label id="container3" class="container">
+        <div class="checkbox-text">
+          <div class="checkbox-text-description">
+        <h7>Customizable Profile</h7>
+        <h8>Custom theme on your profile</h8></div>
+        <h9 class="month-addon">+$2/mo</h9>
+        <h9 class="year-addon">+$20/mo</h9></div>
+        <input id="select3" type="checkbox">
+        <span class="checkmark"></span>
+      </label>
 
-    <button> Go Back</button>
-    <button id="next-step3">Next Step</button> 
+    </div>
+    
+    <div class="bottom-links">
+      <a href="">Go Back</a> 
+      <button id="next-step3">Next Step</button> 
+    </div>
   </div>
   <!-- Step 3 end -->
 
@@ -120,18 +196,37 @@
     <h1>Finishing up</h1>
     <h2>Double-check everything looks OK before confirming.</h2>
 
-    <!-- Dynamically add subscription and add-on selections here -->
+    <div class="order">
+      <div class="chosen-plan-div">
+        <h7 id="chosen-plan">placeholder</h7>
+        <h7 id="chosen-plan-price">price</h7>
+      </div>
+      <hr>
+      <div class="chosen-addons-div">
+        <h9 id="chosen-addon">addon</h9>
+        <h10 id="chosen-plan-price">price</h10>
+      </div>
 
-    Total (per month/year)
+    </div>
+    <div class="total-order">
+      <h10>Total (per month/year)</h10>
+      <h11>total price</h11>
+    </div>
 
-    <button id="go-back">Go Back</button> 
-    <button id="confirm">Confirm</button> 
+    <div class="bottom-links">
+      <a href="">Go Back</a> 
+      <button id="next-step4">Confirm</button> 
+    </div>
   </div>
+  
   <!-- Step 4 end -->
 
   <!-- Step 5 start -->
 
   <div class="steps step-5">
+
+    <img src="./assets/images/icon-thank-you.svg" alt="">
+
     <h1>Thank you!</h1>
 
     <h2>
@@ -140,7 +235,7 @@
     to email us at support@loremgaming.com.
     </h2>
   </div>
-
+</div>
 </div>
 </body>
 </html>
