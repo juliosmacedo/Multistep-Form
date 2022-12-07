@@ -1,0 +1,534 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #EEF5FF;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.step-2, .step-3, .step-4, .step-5{
+    display: none;
+}
+
+.card{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70vw;
+    height: 70vh;
+    display: flex;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.75rem rgb(233, 233, 233));
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.sidebar{
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    padding: 5vh 3vh 3vh 3vh;
+    margin: 2vh;
+    border-radius: 10px;
+    width: 16vw;
+    min-width: 16vw;
+}
+
+.sidesteps{
+    margin-bottom: 3vh;
+    display: flex;
+    margin-left: 3vh;
+}
+
+.sidebar-text{
+    margin-left: 2vh;
+}
+
+h1{
+    margin-bottom: 1vh;
+    font-size: 2.1rem;
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+}
+
+h2{
+    color: hsl(231, 11%, 63%);
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+h3{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 0.5vh;
+    margin-top: 3vh;
+}
+
+h4{
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+
+h5{
+    font-weight: 300;
+    color: white;
+    margin: 0;
+}
+
+h7{
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+h8{
+    font-size: 0.95rem;
+    margin-top: 0.5vh;
+    font-weight: 400;
+    color: hsl(231, 11%, 63%);
+}
+
+h9{
+    font-size: 0.8rem;
+    color: hsl(213, 91%, 13%);
+    margin-top: 0.5vh;
+}
+
+h11{
+    font-size:0.8rem;
+    color: hsl(354, 84%, 57%);
+    margin-top: 3vh;
+}
+
+h12{
+    visibility: hidden;
+    font-size:0.8rem;
+    color: hsl(354, 84%, 57%);
+}
+
+
+p{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    margin: 2vh;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+#name-error-text, #email-error-text, #phone-error-text{
+    display: none;
+}
+
+
+.circle-on {
+    border-radius: 50%;
+    width: 2vh;
+    height: 2vh;
+    padding: 10px;
+    background: hsl(206, 94%, 87%);
+    border: 1px solid hsl(206, 94%, 87%);
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Ubuntu';
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.circle-off {
+    border-radius: 50%;
+    width: 2vh;
+    height: 2vh;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Ubuntu';
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+.steps{
+    margin-left: 5vh;
+    padding: 4vh;
+    width: 35vw;
+    max-width: 35vw;
+}
+
+.step-1{
+    display: flex;
+    flex-direction: column;
+    // display: none;
+}
+
+.step-2{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.step-3{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.step-4{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    display: none;
+}
+
+.step-5{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    text-align: center;
+    line-height: 2re;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    display: none;
+}
+
+.step-5 h2{
+    margin-top: 2vh;
+    line-height: 1.6rem;
+}
+
+.form{
+    margin-top: 0vh;
+}
+
+input{
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 2vh;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-width: 1px;
+    border-color: hsl(229, 24%, 87%);
+    border-style: solid;
+}
+
+.togglediv {
+    display: flex;
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(240, 5%, 96%);
+    border-radius: 10px;
+    margin-top: 3vh;
+    height: 4vh;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 23px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:  hsl(213, 96%, 18%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(213, 96%, 18%);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 17px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+}
+
+a{
+
+    margin-right: auto;
+    color: hsl(231, 11%, 63%);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+button{
+    margin-top: auto;
+    margin-left: auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 0.91rem;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 0.05rem;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: hsl(213, 96%, 18%);
+    width: 14vh;
+    height: 5vh;
+}
+
+#next-step4{
+    background-color:hsl(243, 100%, 62%);
+}
+
+
+.bottom-links{
+    margin-top: auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.plans-div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6vh;
+    cursor: pointer;
+}
+
+.plan{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 11vw;
+    max-width: 11vw;
+    height: 20vh;
+    max-height: 20vh;
+    border-radius: 5px;
+    border: 1px solid hsl(229, 24%, 87%);
+    padding: 1.5vh;
+}
+
+.plan-text-month{
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-text-year{
+    display: none;
+    flex-direction: column;
+}
+
+.plan:hover, .plan::after{
+    border: 1px solid #5346b2;
+    background-color: #f8f9fe;
+}
+
+.selected{
+    border: 1px solid #5346b2;
+    background-color: #f8f9fe;
+}
+
+.icon{
+    width: 4.5vh;
+}
+
+.plan-selector-on{
+    color: hsl(213, 96%, 18%);
+}
+
+.plan-selector-off{
+    color: hsl(231, 11%, 63%);
+}
+
+
+
+
+/* Customize the label (the container) */
+.container {
+    z-index: 2;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 5px;
+    padding: 3vh;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    left: 2vh;
+    top: 4vh;
+    height: 20px;
+    border-radius: 5px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #483EFF;
+  }
+
+  .container input:checked ~ .container {
+    background-color: #483EFF;
+  }
+
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.selected-container{
+    border: 1px solid hsl(230, 24%, 28%);
+    background-color: #F8F9FE;
+}
+
+
+.checkbox-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5vh;
+}
+
+.checkbox-text-description{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-ons{
+    margin-top: 3vh;
+}
+
+.month-addon, .year-addon{
+    display: none;
+}
+
+hr{
+    opacity: 0.2;
+}
+
+.order{
+    height: 20vh;
+    margin-top: 3vh;
+    background-color: #F8F9FE;
+    border-radius: 10px;
+    padding: 3vh;
+}
+
+.chosen-plan-div, .chosen-addons-div, .total-order{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-order{
+    padding: 3vh;
+
+}
