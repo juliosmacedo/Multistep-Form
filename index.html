@@ -24,27 +24,27 @@
     
   <div class="sidebar">
     <div class="sidesteps">
-      <div class="circle-on">1</div>
+      <div id="step1-sidebar" class="circle-on">1</div>
       <div class="sidebar-text">
       <h5>STEP 1</h5>
       <h4>Your info</h4></div>
     </div>
 
     <div class="sidesteps">
-      <div class="circle-on circle-off">2</div>
+      <div id="step2-sidebar" class="circle-on circle-off">2</div>
       <div class="sidebar-text"><h5>STEP 2</h5>
       <h4>Select plan</h4></div>
     </div>
 
     <div class="sidesteps">
-      <div class="circle-on circle-off"">3</div>
+      <div id="step3-sidebar" class="circle-on circle-off"">3</div>
       <div class="sidebar-text"><h5>STEP 3</h5>
       <h4>Add-ons</h4>
     </div>
     </div>
 
     <div class="sidesteps">
-      <div class="circle-on circle-off"">4</div>
+      <div id="step4-sidebar" class="circle-on circle-off"">4</div>
       <div class="sidebar-text"><h5>STEP 4</h5>
       <h4>Summary</h4>
     </div>
@@ -56,21 +56,23 @@
   <!-- Sidebar end -->
 
   <!-- Step 1 start -->
-  <div class="steps step-1">
+
+  <div id="step-1" class="steps step-1">
     <h1>Personal info</h1>
     <h2>Please provide your name, email address, and phone number.</h2>
     <div class="form">
-      <h3>Name</h3>
+      <div class="form-labels">
+      <h3>Name</h3> <h11 id="name-error-text">This field is required.</h11></div>
       <input type="text" name="" id="user-name-input" placeholder="e.g. Stephen King">
       
-
-      <h3>Email Address</h3>
+      <div class="form-labels">
+      <h3>Email Address</h3> <h11 id="email-error-text">This field is required.</h11></div>
       <input type="email" name="" id="user-email-input" placeholder="e.g. stephenking@lorem.com">
-    
 
-      <h3>Phone Number</h3>
+      <div class="form-labels">
+      <h3>Phone Number</h3>  <h11 id="phone-error-text">This field is required.</h11></div>
       <input type="text" name="" id="user-phone-input" placeholder="e.g. +1 234 567 890">
-    
+
     </div>
 
     <button id="next-step1">Next Step</button> 
@@ -79,12 +81,12 @@
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
-  <div class="steps step-2">
+  <div id="step-2" class="steps step-2">
     <h1>Select your plan</h1>
     <h2>You have the option of monthly or yearly billing.</h2>
-
+    <h12 id="planErrorText">Select your plan.</h12>
     <div class="plans-div">
-      <div class="plan plan-on">
+      <div class="plan">
         <img class="icon" src="./assets/images/icon-arcade.svg" alt="">
         <div class="plan-text-month">
           <h7>Arcade</h7> 
@@ -125,12 +127,12 @@
     </div>
 
     <div class="togglediv">
-      <p class="plan-selector-on">Monthly</p>
-      <label  class="switch">
-        <input type="checkbox" onclick="changeText()">
+      <p id="monthly" class="plan-selector-on">Monthly</p>
+      <label class="switch">
+        <input id="plan-selector" type="checkbox">
         <span class="slider round" ></span>
       </label>
-      <p class="plan-selector-on plan-selector-off">Yearly</p>
+      <p id="yearly" class="plan-selector-on plan-selector-off">Yearly</p>
     </div>
     
     <div class="bottom-links">
@@ -141,7 +143,7 @@
   <!-- Step 2 end -->
 
   <!-- Step 3 start -->
-  <div class="steps step-3">
+  <div id="step-3" class="steps step-3">
     <h1>Pick add-ons</h1>
     <h2>Add-ons help enhance your gaming experience.</h2>
 
@@ -156,7 +158,7 @@
         <h9 class="month-addon">+$1/mo</h9>
         <h9 class="year-addon">+$10/mo</h9></div>
 
-        <input id="select1" type="checkbox">
+        <input id="select1" type="checkbox" value="Online Service">
         <span  class="checkmark"></span>
       </label>
       
@@ -167,7 +169,7 @@
         <h8>Extra 1TB of cloud save</h8></div>
         <h9 class="month-addon">+$2/mo</h9>
         <h9 class="year-addon">+$20/mo</h9></div>
-        <input id="select2" type="checkbox">
+        <input id="select2" type="checkbox" value="Larger Storage">
         <span class="checkmark"></span>
       </label>
       
@@ -178,7 +180,7 @@
         <h8>Custom theme on your profile</h8></div>
         <h9 class="month-addon">+$2/mo</h9>
         <h9 class="year-addon">+$20/mo</h9></div>
-        <input id="select3" type="checkbox">
+        <input id="select3" type="checkbox" value="Customizable Profile">
         <span class="checkmark"></span>
       </label>
 
@@ -192,7 +194,7 @@
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
-  <div class="steps step-4">
+  <div id="step-4" class="steps step-4">
     <h1>Finishing up</h1>
     <h2>Double-check everything looks OK before confirming.</h2>
 
@@ -202,15 +204,15 @@
         <h7 id="chosen-plan-price">price</h7>
       </div>
       <hr>
-      <div class="chosen-addons-div">
-        <h9 id="chosen-addon">addon</h9>
-        <h10 id="chosen-plan-price">price</h10>
+      <div id="chosen-addons-div" class="chosen-addons-div">
+        <!-- <h9 id="chosen-addon">addon</h9>
+        <h10 id="chosen-plan-price">price</h10> -->
       </div>
 
     </div>
     <div class="total-order">
-      <h10>Total (per month/year)</h10>
-      <h11>total price</h11>
+      <h10 id="totalSummaryOnScreen">Total (per month/year)</h10>
+      <h13 id="totalPriceOnScreen">total price</h13>
     </div>
 
     <div class="bottom-links">
@@ -223,7 +225,7 @@
 
   <!-- Step 5 start -->
 
-  <div class="steps step-5">
+  <div id="step-5" class="steps step-5">
 
     <img src="./assets/images/icon-thank-you.svg" alt="">
 
@@ -237,5 +239,6 @@
   </div>
 </div>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
