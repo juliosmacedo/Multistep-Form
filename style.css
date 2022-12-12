@@ -146,8 +146,10 @@ p{
 
 .circle-on {
     border-radius: 50%;
-    width: 2vh;
-    height: 2vh;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
     padding: 10px;
     background: hsl(206, 94%, 87%);
     border: 1px solid hsl(206, 94%, 87%);
@@ -164,8 +166,6 @@ p{
 
 .circle-off {
     border-radius: 50%;
-    width: 2vh;
-    height: 2vh;
     padding: 10px;
     background: transparent;
     border: 1px solid rgb(255, 255, 255);
@@ -553,3 +553,86 @@ hr{
     padding: 3vh;
 
 }
+
+.sidebar-mobile{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .card{
+        flex-direction: column;
+        top: 25%;
+        filter: none;
+        max-width: 91vw;
+        width: 91vw;
+        height: 60vh;
+        position: relative;
+    }
+
+    .sidebar{
+        display: none;
+    }
+    .sidebar-mobile{
+        display: block;
+        background-image: url(./assets/images/bg-sidebar-mobile.svg);
+        height: 20vh;
+        background-size: cover;
+    }
+    .circles-mobile{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5vh 9vh 0 9vh;
+    }
+    .steps{
+        width: 81vw;
+        max-width: 100vw;
+        margin: 0;
+        padding: 2vh;
+    }
+
+    .step-1{
+        width: 81vw;
+    }
+
+    .step-5{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    h1{
+        margin-top: 1vh;
+        font-size: 1.8rem;
+    }
+
+    button{
+    }
+
+    .bottom-links{
+        position: absolute;
+        top: 77vh;
+        right: 0vh;
+        justify-content: space-between;
+        width: 90vw;
+    }
+
+    .plans-div{
+        flex-direction: column;
+        margin-top: 1vh;
+    }
+
+    .plan{
+        height: 9vh;
+        margin: 1vh 0 1vh;
+        flex-direction: row;
+        align-items: center;
+        width: 81vw;
+        max-width: 81vw;
+        justify-content: flex-start;
+    }
+
+    .plan-text-month, .plan-text-year{
+        margin-left: 2vh;
+    }
+  }
